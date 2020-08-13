@@ -7,8 +7,7 @@
     "files": [
         "main.ts",
         "README.md",
-        "number.ts",
-        "obj.ts"
+        "api.ts"
     ],
     "testFiles": [
         "test.ts"
