@@ -1,3 +1,4 @@
+
 {
     "name": "blockObject",
     "version": "1.0.0",
@@ -8,6 +9,19 @@
     "files": [
         "main.ts",
         "README.md",
+        "num.md",
+        "numArray.md",
+        "bool.md",
+        "boolArray.md",
+        "str.md",
+        "strArray.md",
+        "sprite.md",
+        "spriteArray.md",
+        "image.md",
+        "imageArray.md",
+        "loc.md",
+        "locArray.md",
+        "any.md",
         "api.ts"
     ],
     "testFiles": [
