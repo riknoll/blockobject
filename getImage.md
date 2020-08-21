@@ -11,3 +11,6 @@ Reads a property of type Image that is stored inside a BlockObject using the giv
 * **object**: the BlockObject to read the property from
 * **property**: the ImageProp to read
 
+```package
+blockObject=github:riknoll/blockobject
+```

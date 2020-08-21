@@ -11,3 +11,6 @@ Reads a property of type number[] that is stored inside a BlockObject using the 
 * **object**: the BlockObject to read the property from
 * **property**: the NumArrayProp to read
 
+```package
+blockObject=github:riknoll/blockobject
+```

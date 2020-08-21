@@ -11,3 +11,6 @@ Reads a property of type tiles.Location that is stored inside a BlockObject usin
 * **object**: the BlockObject to read the property from
 * **property**: the LocProp to read
 
+```package
+blockObject=github:riknoll/blockobject
+```

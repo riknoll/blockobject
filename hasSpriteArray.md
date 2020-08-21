@@ -11,3 +11,6 @@ Checks to see if a property of type Sprite[] is stored inside a BlockObject usin
 * **object**: the BlockObject to check the property from
 * **property**: the SpriteArrayProp to check for existence
 
+```package
+blockObject=github:riknoll/blockobject
+```

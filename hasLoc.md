@@ -11,3 +11,6 @@ Checks to see if a property of type tiles.Location is stored inside a BlockObjec
 * **object**: the BlockObject to check the property from
 * **property**: the LocProp to check for existence
 
+```package
+blockObject=github:riknoll/blockobject
+```

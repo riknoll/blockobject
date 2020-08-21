@@ -11,3 +11,6 @@ Checks to see if a property of type boolean[] is stored inside a BlockObject usi
 * **object**: the BlockObject to check the property from
 * **property**: the BoolArrayProp to check for existence
 
+```package
+blockObject=github:riknoll/blockobject
+```

@@ -11,3 +11,6 @@ Reads a property of type any that is stored inside a BlockObject using the given
 * **object**: the BlockObject to read the property from
 * **property**: the AnyProp to read
 
+```package
+blockObject=github:riknoll/blockobject
+```

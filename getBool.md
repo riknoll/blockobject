@@ -11,3 +11,6 @@ Reads a property of type boolean that is stored inside a BlockObject using the g
 * **object**: the BlockObject to read the property from
 * **property**: the BoolProp to read
 
+```package
+blockObject=github:riknoll/blockobject
+```

@@ -7,3 +7,6 @@ blockObject._boolProperty(BoolProp.myBool)
 
 Represents a key for a value of type boolean stored on a BlockObject.
 
+```package
+blockObject=github:riknoll/blockobject
+```

@@ -11,3 +11,6 @@ Checks to see if a property of type Image is stored inside a BlockObject using t
 * **object**: the BlockObject to check the property from
 * **property**: the ImageProp to check for existence
 
+```package
+blockObject=github:riknoll/blockobject
+```

@@ -262,6 +262,9 @@ Reads a property of type ${typeInfo.type} that is stored inside a BlockObject us
 * **object**: the BlockObject to read the property from
 * **property**: the ${capitalize(typeInfo.shortName)}Prop to read
 
+\`\`\`package
+blockObject=github:riknoll/blockobject
+\`\`\`
 `
 
 const hasDocs = `# has ${typeInfo.displayName} property
@@ -277,6 +280,9 @@ Checks to see if a property of type ${typeInfo.type} is stored inside a BlockObj
 * **object**: the BlockObject to check the property from
 * **property**: the ${capitalize(typeInfo.shortName)}Prop to check for existence
 
+\`\`\`package
+blockObject=github:riknoll/blockobject
+\`\`\`
 `
 
 const setDocs = `# set ${typeInfo.displayName} property
@@ -307,6 +313,9 @@ ${propertySnippet}
 
 Represents a key for a value of type ${typeInfo.type} stored on a BlockObject.
 
+\`\`\`package
+blockObject=github:riknoll/blockobject
+\`\`\`
 `
 
     files["get" + capitalize(typeInfo.shortName) + ".md"] = getDocs;
