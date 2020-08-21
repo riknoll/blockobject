@@ -51,7 +51,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_numberProp
     //% weight=130
-    //% help="github:blockObject/num.md"
+    //% help="github:blockObject/getNum.md"
     //% blockGap=8
     export function getNumberProperty(obj: BlockObject, property: number): number {
         return (obj as any)["0num" + property] as number;
@@ -69,7 +69,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_numberProp
     //% weight=120
-    //% help="github:blockObject/num.md"
+    //% help="github:blockObject/hasNum.md"
     //% blockGap=8
     export function hasNumberProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0num" + property] !== undefined;
@@ -87,7 +87,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_numberProp
     //% weight=110
-    //% help="github:blockObject/num.md"
+    //% help="github:blockObject/setNum.md"
     //% blockGap=8
     //% value.shadow="math_number"
     //% value.defl="0"
@@ -128,7 +128,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_numberArrayProp
     //% weight=30
-    //% help="github:blockObject/numArray.md"
+    //% help="github:blockObject/getNumArray.md"
     //% blockGap=8
     export function getNumberArrayProperty(obj: BlockObject, property: number): number[] {
         return (obj as any)["0numArray" + property] as number[];
@@ -146,7 +146,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_numberArrayProp
     //% weight=20
-    //% help="github:blockObject/numArray.md"
+    //% help="github:blockObject/hasNumArray.md"
     //% blockGap=8
     export function hasNumberArrayProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0numArray" + property] !== undefined;
@@ -164,7 +164,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_numberArrayProp
     //% weight=10
-    //% help="github:blockObject/numArray.md"
+    //% help="github:blockObject/setNumArray.md"
     //% blockGap=8
     //% value.shadow="lists_create_with"
     //% value.defl="math_number"
@@ -205,7 +205,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_booleanProp
     //% weight=130
-    //% help="github:blockObject/bool.md"
+    //% help="github:blockObject/getBool.md"
     //% blockGap=8
     export function getBooleanProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0bool" + property] as boolean;
@@ -223,7 +223,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_booleanProp
     //% weight=120
-    //% help="github:blockObject/bool.md"
+    //% help="github:blockObject/hasBool.md"
     //% blockGap=8
     export function hasBooleanProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0bool" + property] !== undefined;
@@ -241,7 +241,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_booleanProp
     //% weight=110
-    //% help="github:blockObject/bool.md"
+    //% help="github:blockObject/setBool.md"
     //% blockGap=8
     //% value.shadow="logic_boolean"
     //% value.defl="false"
@@ -282,7 +282,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_booleanArrayProp
     //% weight=30
-    //% help="github:blockObject/boolArray.md"
+    //% help="github:blockObject/getBoolArray.md"
     //% blockGap=8
     export function getBooleanArrayProperty(obj: BlockObject, property: number): boolean[] {
         return (obj as any)["0boolArray" + property] as boolean[];
@@ -300,7 +300,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_booleanArrayProp
     //% weight=20
-    //% help="github:blockObject/boolArray.md"
+    //% help="github:blockObject/hasBoolArray.md"
     //% blockGap=8
     export function hasBooleanArrayProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0boolArray" + property] !== undefined;
@@ -318,7 +318,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_booleanArrayProp
     //% weight=10
-    //% help="github:blockObject/boolArray.md"
+    //% help="github:blockObject/setBoolArray.md"
     //% blockGap=8
     //% value.shadow="lists_create_with"
     //% value.defl="logic_boolean"
@@ -359,7 +359,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_stringProp
     //% weight=130
-    //% help="github:blockObject/str.md"
+    //% help="github:blockObject/getStr.md"
     //% blockGap=8
     export function getStringProperty(obj: BlockObject, property: number): string {
         return (obj as any)["0str" + property] as string;
@@ -377,7 +377,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_stringProp
     //% weight=120
-    //% help="github:blockObject/str.md"
+    //% help="github:blockObject/hasStr.md"
     //% blockGap=8
     export function hasStringProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0str" + property] !== undefined;
@@ -395,7 +395,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_stringProp
     //% weight=110
-    //% help="github:blockObject/str.md"
+    //% help="github:blockObject/setStr.md"
     //% blockGap=8
     //% value.shadow="text"
     //% value.defl="''"
@@ -436,7 +436,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_stringArrayProp
     //% weight=30
-    //% help="github:blockObject/strArray.md"
+    //% help="github:blockObject/getStrArray.md"
     //% blockGap=8
     export function getStringArrayProperty(obj: BlockObject, property: number): string[] {
         return (obj as any)["0strArray" + property] as string[];
@@ -454,7 +454,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_stringArrayProp
     //% weight=20
-    //% help="github:blockObject/strArray.md"
+    //% help="github:blockObject/hasStrArray.md"
     //% blockGap=8
     export function hasStringArrayProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0strArray" + property] !== undefined;
@@ -472,7 +472,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_stringArrayProp
     //% weight=10
-    //% help="github:blockObject/strArray.md"
+    //% help="github:blockObject/setStrArray.md"
     //% blockGap=8
     //% value.shadow="lists_create_with"
     //% value.defl="text"
@@ -513,7 +513,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_spriteProp
     //% weight=130
-    //% help="github:blockObject/sprite.md"
+    //% help="github:blockObject/getSprite.md"
     //% blockGap=8
     export function getSpriteProperty(obj: BlockObject, property: number): Sprite {
         return (obj as any)["0sprite" + property] as Sprite;
@@ -531,7 +531,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_spriteProp
     //% weight=120
-    //% help="github:blockObject/sprite.md"
+    //% help="github:blockObject/hasSprite.md"
     //% blockGap=8
     export function hasSpriteProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0sprite" + property] !== undefined;
@@ -549,7 +549,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_spriteProp
     //% weight=110
-    //% help="github:blockObject/sprite.md"
+    //% help="github:blockObject/setSprite.md"
     //% blockGap=8
     //% value.shadow="variables_get"
     //% value.defl="mySprite"
@@ -590,7 +590,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_spriteArrayProp
     //% weight=30
-    //% help="github:blockObject/spriteArray.md"
+    //% help="github:blockObject/getSpriteArray.md"
     //% blockGap=8
     export function getSpriteArrayProperty(obj: BlockObject, property: number): Sprite[] {
         return (obj as any)["0spriteArray" + property] as Sprite[];
@@ -608,7 +608,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_spriteArrayProp
     //% weight=20
-    //% help="github:blockObject/spriteArray.md"
+    //% help="github:blockObject/hasSpriteArray.md"
     //% blockGap=8
     export function hasSpriteArrayProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0spriteArray" + property] !== undefined;
@@ -626,7 +626,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_spriteArrayProp
     //% weight=10
-    //% help="github:blockObject/spriteArray.md"
+    //% help="github:blockObject/setSpriteArray.md"
     //% blockGap=8
     //% value.shadow="lists_create_with"
     
@@ -667,7 +667,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_imageProp
     //% weight=130
-    //% help="github:blockObject/image.md"
+    //% help="github:blockObject/getImage.md"
     //% blockGap=8
     export function getImageProperty(obj: BlockObject, property: number): Image {
         return (obj as any)["0image" + property] as Image;
@@ -685,7 +685,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_imageProp
     //% weight=120
-    //% help="github:blockObject/image.md"
+    //% help="github:blockObject/hasImage.md"
     //% blockGap=8
     export function hasImageProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0image" + property] !== undefined;
@@ -703,7 +703,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_imageProp
     //% weight=110
-    //% help="github:blockObject/image.md"
+    //% help="github:blockObject/setImage.md"
     //% blockGap=8
     //% value.shadow="screen_image_picker"
     
@@ -744,7 +744,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_imageArrayProp
     //% weight=30
-    //% help="github:blockObject/imageArray.md"
+    //% help="github:blockObject/getImageArray.md"
     //% blockGap=8
     export function getImageArrayProperty(obj: BlockObject, property: number): Image[] {
         return (obj as any)["0imageArray" + property] as Image[];
@@ -762,7 +762,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_imageArrayProp
     //% weight=20
-    //% help="github:blockObject/imageArray.md"
+    //% help="github:blockObject/hasImageArray.md"
     //% blockGap=8
     export function hasImageArrayProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0imageArray" + property] !== undefined;
@@ -780,7 +780,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_imageArrayProp
     //% weight=10
-    //% help="github:blockObject/imageArray.md"
+    //% help="github:blockObject/setImageArray.md"
     //% blockGap=8
     //% value.shadow="lists_create_with"
     //% value.defl="screen_image_picker"
@@ -821,7 +821,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_locationProp
     //% weight=130
-    //% help="github:blockObject/loc.md"
+    //% help="github:blockObject/getLoc.md"
     //% blockGap=8
     export function getLocationProperty(obj: BlockObject, property: number): tiles.Location {
         return (obj as any)["0loc" + property] as tiles.Location;
@@ -839,7 +839,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_locationProp
     //% weight=120
-    //% help="github:blockObject/loc.md"
+    //% help="github:blockObject/hasLoc.md"
     //% blockGap=8
     export function hasLocationProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0loc" + property] !== undefined;
@@ -857,7 +857,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_locationProp
     //% weight=110
-    //% help="github:blockObject/loc.md"
+    //% help="github:blockObject/setLoc.md"
     //% blockGap=8
     //% value.shadow="mapgettile"
     
@@ -898,7 +898,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_locationArrayProp
     //% weight=30
-    //% help="github:blockObject/locArray.md"
+    //% help="github:blockObject/getLocArray.md"
     //% blockGap=8
     export function getLocationArrayProperty(obj: BlockObject, property: number): tiles.Location[] {
         return (obj as any)["0locArray" + property] as tiles.Location[];
@@ -916,7 +916,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_locationArrayProp
     //% weight=20
-    //% help="github:blockObject/locArray.md"
+    //% help="github:blockObject/hasLocArray.md"
     //% blockGap=8
     export function hasLocationArrayProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0locArray" + property] !== undefined;
@@ -934,7 +934,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_locationArrayProp
     //% weight=10
-    //% help="github:blockObject/locArray.md"
+    //% help="github:blockObject/setLocArray.md"
     //% blockGap=8
     //% value.shadow="lists_create_with"
     //% value.defl="mapgettile"
@@ -975,7 +975,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_anyProp
     //% weight=130
-    //% help="github:blockObject/any.md"
+    //% help="github:blockObject/getAny.md"
     //% blockGap=8
     export function getAnyProperty(obj: BlockObject, property: number): any {
         return (obj as any)["0any" + property] as any;
@@ -993,7 +993,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_anyProp
     //% weight=120
-    //% help="github:blockObject/any.md"
+    //% help="github:blockObject/hasAny.md"
     //% blockGap=8
     export function hasAnyProperty(obj: BlockObject, property: number): boolean {
         return (obj as any)["0any" + property] !== undefined;
@@ -1011,7 +1011,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_anyProp
     //% weight=110
-    //% help="github:blockObject/any.md"
+    //% help="github:blockObject/setAny.md"
     //% blockGap=8
     
     

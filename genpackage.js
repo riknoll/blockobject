@@ -1,5 +1,6 @@
 var fs = require("fs");
 var path = require("path");
+const { type } = require("os");
 
 const types = [
     {
@@ -102,11 +103,11 @@ let files = {};
 for (const type of types) {
     type.weight = 100;
     out += genCode(type);
-    files[type.shortName + ".md"] = genDocumentation(type);
+    genDocumentation(type);
     if (type.type !== "any") {
         const arr = arrayInfo(type)
         out += genCode(arr);
-        files[arr.shortName + ".md"] = genDocumentation(arr);
+        genDocumentation(arr);
     }
 }
 
@@ -189,7 +190,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_${typeInfo.displayName}Prop
     //% weight=${typeInfo.weight + 30}
-    //% help="github:blockObject/${typeInfo.shortName + ".md"}"
+    //% help="github:blockObject/${"get" + capitalize(typeInfo.shortName) + ".md"}"
     //% blockGap=8
     export function get${capitalize(typeInfo.displayName)}Property(obj: BlockObject, property: number): ${typeInfo.type} {
         return (obj as any)["0${typeInfo.shortName}" + property] as ${typeInfo.type};
@@ -207,7 +208,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_${typeInfo.displayName}Prop
     //% weight=${typeInfo.weight + 20}
-    //% help="github:blockObject/${typeInfo.shortName + ".md"}"
+    //% help="github:blockObject/${"has" + capitalize(typeInfo.shortName) + ".md"}"
     //% blockGap=8
     export function has${capitalize(typeInfo.displayName)}Property(obj: BlockObject, property: number): boolean {
         return (obj as any)["0${typeInfo.shortName}" + property] !== undefined;
@@ -225,7 +226,7 @@ namespace blockObject {
     //% obj.shadow="variables_get" obj.defl="myObject"
     //% property.shadow=blockObject_${typeInfo.displayName}Prop
     //% weight=${typeInfo.weight + 10}
-    //% help="github:blockObject/${typeInfo.shortName + ".md"}"
+    //% help="github:blockObject/${"set" + capitalize(typeInfo.shortName) + ".md"}"
     //% blockGap=8
     ${typeInfo.valueShadow ? `//% value.shadow="${typeInfo.valueShadow}"` : ""}
     ${typeInfo.valueDefault ? `//% value.defl="${typeInfo.valueDefault}"` : ""}
@@ -247,10 +248,8 @@ namespace ${capitalize(typeInfo.shortName)}Prop {
 
 function genDocumentation(typeInfo) {
     const propertySnippet = `blockObject._${typeInfo.shortName}Property(${capitalize(typeInfo.shortName)}Prop.my${capitalize(typeInfo.shortName)})`
-    return (
-`# ${typeInfo.displayName} blocks
 
-## get ${typeInfo.displayName} property
+const getDocs = `# get ${typeInfo.displayName} property
 
 \`\`\`sig
 blockObject.get${capitalize(typeInfo.displayName)}Property(blockObject.create(), ${propertySnippet})
@@ -258,13 +257,14 @@ blockObject.get${capitalize(typeInfo.displayName)}Property(blockObject.create(),
 
 Reads a property of type ${typeInfo.type} that is stored inside a BlockObject using the given ${capitalize(typeInfo.shortName)}Prop.
 
-### Parameters
+## Parameters
 
 * **object**: the BlockObject to read the property from
 * **property**: the ${capitalize(typeInfo.shortName)}Prop to read
 
+`
 
-## has ${typeInfo.displayName} property
+const hasDocs = `# has ${typeInfo.displayName} property
 
 \`\`\`sig
 blockObject.has${capitalize(typeInfo.displayName)}Property(blockObject.create(), ${propertySnippet})
@@ -272,13 +272,14 @@ blockObject.has${capitalize(typeInfo.displayName)}Property(blockObject.create(),
 
 Checks to see if a property of type ${typeInfo.type} is stored inside a BlockObject using the given ${capitalize(typeInfo.shortName)}Prop.
 
-### Parameters
+## Parameters
 
 * **object**: the BlockObject to check the property from
 * **property**: the ${capitalize(typeInfo.shortName)}Prop to check for existence
 
+`
 
-## set ${typeInfo.displayName} property
+const setDocs = `# set ${typeInfo.displayName} property
 
 \`\`\`sig
 blockObject.set${capitalize(typeInfo.displayName)}Property(blockObject.create(), ${propertySnippet}, ${typeInfo.valueDefault || null})
@@ -286,7 +287,7 @@ blockObject.set${capitalize(typeInfo.displayName)}Property(blockObject.create(),
 
 Sets a property of type ${typeInfo.type} on the given BlockObject using the given ${capitalize(typeInfo.shortName)}Prop.
 
-### Parameters
+## Parameters
 
 * **object**: the BlockObject to set the property on
 * **property**: the ${capitalize(typeInfo.shortName)}Prop to set
@@ -295,5 +296,21 @@ Sets a property of type ${typeInfo.type} on the given BlockObject using the give
 \`\`\`package
 blockObject=github:riknoll/blockobject
 \`\`\`
-`)
+`
+
+    const propDocs = `
+# ${typeInfo.displayName} property
+
+\`\`\`sig
+${propertySnippet}
+\`\`\`
+
+Represents a key for a value of type ${typeInfo.type} stored on a BlockObject.
+
+`
+
+    files["get" + capitalize(typeInfo.shortName) + ".md"] = getDocs;
+    files["has" + capitalize(typeInfo.shortName) + ".md"] = hasDocs;
+    files["set" + capitalize(typeInfo.shortName) + ".md"] = setDocs;
+    files[typeInfo.shortName + ".md"] = propDocs;
 }
